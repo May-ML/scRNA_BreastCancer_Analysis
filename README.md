@@ -1,15 +1,26 @@
----
-title: "Breast_cancer_analysis"
-author: "Meiheng Liang"
-date: "2023-Dec"
-output: html_document
----
+Name: Meiheng Liang
+Programming Language: [Python]
+Date: [Dec 2023]
+Description:
+This script is a demonstration the application of scRNA analysis using seurat pipeline in analyzing cellular composition of invasive ductal breast cancer tissue. The data which available from https://10xgenomics.com
+
+############################################################################
+Required files:
+
+filtered_feature_bc_matrix
+
+############################################################################
+Required packages:
+Tidyverse
+patchwork
+Seurat
+
+############################################################################
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 
-install.packages("patchwork")
-install.packages("Seurat")
+
 ##Load libraries
   library(dplyr)
   library(Seurat)
@@ -127,7 +138,8 @@ head(bc) # We can look at different column data, notice theres now percent.mt co
   # Plot the Umap but with the annotated clusters
   DimPlot(bc, reduction = "umap", label = TRUE, pt.size = 0.5) + NoLegend()
   
-```
 
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+############################################################################
+# Output files: 
+.html
